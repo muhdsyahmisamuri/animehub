@@ -1,0 +1,179 @@
+.home-page {
+  width: 100%;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.home-sections {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.anime-section {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  /* padding: 0 5.5rem; */
+  position: relative;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.title-icon {
+  font-size: 2rem;
+  transition: transform 0.3s;
+}
+
+.anime-section:hover .title-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.see-all-link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: 2px solid var(--text);
+  border-radius: 50px;
+  background: transparent;
+}
+
+.see-all-link:hover {
+  background: var(--text);
+  color: white;
+  transform: translateX(4px);
+}
+
+.see-all-link::after {
+  content: '→';
+  transition: transform 0.3s;
+}
+
+.see-all-link:hover::after {
+  transform: translateX(4px);
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.explore-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.explore-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--text);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  background: var(--surface-hover);
+}
+
+.explore-card-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.explore-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.explore-card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .home-sections {
+    padding: 0 1rem;
+  }
+
+  .anime-section {
+    margin-bottom: 3rem;
+  }
+
+  .section-header {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.125rem;
+    flex: 0 1 auto;
+    margin: 0;
+  }
+
+  .title-icon {
+    font-size: 1.375rem;
+  }
+
+  .see-all-link {
+    font-size: 0.75rem;
+    padding: 0.4375rem 0.75rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .explore-card {
+    padding: 1.25rem;
+  }
+
+  .explore-card h3 {
+    font-size: 1rem;
+  }
+
+  .explore-card p {
+    font-size: 0.8125rem;
+  }
+
+  .explore-card-icon {
+    font-size: 2.25rem;
+  }
+}
+
